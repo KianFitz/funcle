@@ -1,0 +1,122 @@
+[
+  {
+    "name": "List",
+    "header": "System.Collections.Generic",
+    "introducedIn": "C# 2.0",
+    "namingStyle": "PascalCase",
+    "overloads": 8,
+    "parameterCount": 1
+  },
+  {
+    "name": "Dictionary",
+    "header": "System.Collections.Generic",
+    "introducedIn": "C# 2.0",
+    "namingStyle": "PascalCase",
+    "overloads": 10,
+    "parameterCount": 2
+  },
+  {
+    "name": "async",
+    "header": "System",
+    "introducedIn": "C# 5.0",
+    "namingStyle": "keyword",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "Task",
+    "header": "System.Threading.Tasks",
+    "introducedIn": "C# 4.0",
+    "namingStyle": "PascalCase",
+    "overloads": 5,
+    "parameterCount": 1
+  },
+  {
+    "name": "IEnumerable",
+    "header": "System.Collections.Generic",
+    "introducedIn": "C# 2.0",
+    "namingStyle": "PascalCase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "LINQ",
+    "header": "System.Linq",
+    "introducedIn": "C# 3.0",
+    "namingStyle": "acronym",
+    "overloads": 50,
+    "parameterCount": 2
+  },
+  {
+    "name": "Nullable",
+    "header": "System",
+    "introducedIn": "C# 2.0",
+    "namingStyle": "PascalCase",
+    "overloads": 6,
+    "parameterCount": 1
+  },
+  {
+    "name": "delegate",
+    "header": "System",
+    "introducedIn": "C# 1.0",
+    "namingStyle": "keyword",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "Tuple",
+    "header": "System",
+    "introducedIn": "C# 4.0",
+    "namingStyle": "PascalCase",
+    "overloads": 8,
+    "parameterCount": 2
+  },
+  {
+    "name": "HashSet",
+    "header": "System.Collections.Generic",
+    "introducedIn": "C# 3.5",
+    "namingStyle": "PascalCase",
+    "overloads": 6,
+    "parameterCount": 1
+  },
+  {
+    "name": "using",
+    "header": "System",
+    "introducedIn": "C# 1.0",
+    "namingStyle": "keyword",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "dynamic",
+    "header": "System",
+    "introducedIn": "C# 4.0",
+    "namingStyle": "keyword",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "var",
+    "header": "System",
+    "introducedIn": "C# 3.0",
+    "namingStyle": "keyword",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "ConcurrentDictionary",
+    "header": "System.Collections.Concurrent",
+    "introducedIn": "C# 4.0",
+    "namingStyle": "PascalCase",
+    "overloads": 8,
+    "parameterCount": 2
+  },
+  {
+    "name": "StackTrace",
+    "header": "System.Diagnostics",
+    "introducedIn": "C# 1.0",
+    "namingStyle": "PascalCase",
+    "overloads": 5,
+    "parameterCount": 1
+  }
+]

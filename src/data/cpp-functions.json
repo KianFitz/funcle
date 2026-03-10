@@ -1,0 +1,122 @@
+[
+  {
+    "name": "vector",
+    "header": "<vector>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 12,
+    "parameterCount": 2
+  },
+  {
+    "name": "sort",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "optional",
+    "header": "<optional>",
+    "introducedIn": "C++17",
+    "namingStyle": "snake_case",
+    "overloads": 8,
+    "parameterCount": 1
+  },
+  {
+    "name": "unique_ptr",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 6,
+    "parameterCount": 2
+  },
+  {
+    "name": "string",
+    "header": "<string>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 15,
+    "parameterCount": 1
+  },
+  {
+    "name": "map",
+    "header": "<map>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 10,
+    "parameterCount": 2
+  },
+  {
+    "name": "array",
+    "header": "<array>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "unordered_map",
+    "header": "<unordered_map>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 10,
+    "parameterCount": 2
+  },
+  {
+    "name": "function",
+    "header": "<functional>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 5,
+    "parameterCount": 1
+  },
+  {
+    "name": "shared_ptr",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 8,
+    "parameterCount": 2
+  },
+  {
+    "name": "variant",
+    "header": "<variant>",
+    "introducedIn": "C++17",
+    "namingStyle": "snake_case",
+    "overloads": 7,
+    "parameterCount": 2
+  },
+  {
+    "name": "filesystem::path",
+    "header": "<filesystem>",
+    "introducedIn": "C++17",
+    "namingStyle": "snake_case",
+    "overloads": 20,
+    "parameterCount": 1
+  },
+  {
+    "name": "any",
+    "header": "<any>",
+    "introducedIn": "C++17",
+    "namingStyle": "snake_case",
+    "overloads": 5,
+    "parameterCount": 0
+  },
+  {
+    "name": "span",
+    "header": "<span>",
+    "introducedIn": "C++20",
+    "namingStyle": "snake_case",
+    "overloads": 8,
+    "parameterCount": 2
+  },
+  {
+    "name": "ranges::sort",
+    "header": "<algorithm>",
+    "introducedIn": "C++20",
+    "namingStyle": "snake_case",
+    "overloads": 4,
+    "parameterCount": 1
+  }
+]
