@@ -3,5 +3,5 @@ import { Redis } from "@upstash/redis";
 
 export const ratelimit = new Ratelimit({
   redis: Redis.fromEnv(),
-  limiter: Ratelimit.slidingWindow(40, "1 h"), // 40 requests per hour per IP
+  limiter: Ratelimit.slidingWindow(40, "1 h"),
 });

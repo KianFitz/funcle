@@ -20,6 +20,8 @@ interface StreakData {
 interface GameComponentProps {
   language: "cpp" | "csharp";
   functions: CppFunction[];
+  archiveDate?: string; // Format: YYYY-MM-DD
+  isArchiveMode?: boolean;
 }
 
 // Helper function to compare version strings
@@ -56,7 +58,7 @@ function compareVersions(v1: string, v2: string): number {
   return 0;
 }
 
-export function GameComponent({ language, functions }: GameComponentProps) {
+export function GameComponent({ language, functions, archiveDate, isArchiveMode = false }: GameComponentProps) {
   const [gameState, setGameState] = useState<GameState | null>(null);
   const [loading, setLoading] = useState(true);
   const [guessInput, setGuessInput] = useState("");
@@ -70,54 +72,77 @@ export function GameComponent({ language, functions }: GameComponentProps) {
     history: `funcle${language}GameHistory`,
   };
 
+  // Helper function to get daily function for any date
+  function getFunctionForDate(date: string): CppFunction {
+    const dateObj = new Date(date);
+    const startDate = new Date("2024-01-01");
+    const daysSinceStart = Math.floor(
+      (dateObj.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
+    );
+
+    const index = daysSinceStart % functions.length;
+    return functions[index] as CppFunction;
+  }
+
   // Fetch the daily function
   useEffect(() => {
     const fetchDailyFunction = async () => {
       try {
-        // Load streak from localStorage
-        const streakData = localStorage.getItem(storageKeys.streak);
-        const streakInfo = streakData ? (JSON.parse(streakData) as StreakData) : { currentStreak: 0, lastGameDate: "" };
-
-        // Check if today is a new day
-        const today = new Date().toISOString().split("T")[0];
-        if (streakInfo.lastGameDate !== today) {
-          // New day, check if we should reset the streak
-          const gameHistory = localStorage.getItem(storageKeys.history);
-          if (gameHistory) {
-            const history: GameHistory[] = JSON.parse(gameHistory);
-            const lastGame = history[history.length - 1];
-            const lastGameDate = lastGame?.date;
-
-            // If last game wasn't yesterday, reset streak
-            const yesterday = new Date(new Date().setDate(new Date().getDate() - 1))
-              .toISOString()
-              .split("T")[0];
-            if (lastGameDate !== yesterday) {
-              streakInfo.currentStreak = 0;
-            }
-          }
+        // In archive mode, use the provided date; otherwise use today
+        const gameDate = isArchiveMode ? archiveDate : new Date().toISOString().split("T")[0];
+        
+        if (!gameDate) {
+          console.error("No date available");
+          return;
         }
 
-        setStreak(streakInfo.currentStreak);
+        if (!isArchiveMode) {
+          // Load streak from localStorage (only for daily games)
+          const streakData = localStorage.getItem(storageKeys.streak);
+          const streakInfo = streakData ? (JSON.parse(streakData) as StreakData) : { currentStreak: 0, lastGameDate: "" };
 
-        // Get daily function (deterministic based on date)
-        const dailyIndex = new Date().getDate() % functions.length;
-        const dailyFunction = functions[dailyIndex];
+          // Check if today is a new day
+          const today = new Date().toISOString().split("T")[0];
+          if (streakInfo.lastGameDate !== today) {
+            // New day, check if we should reset the streak
+            const gameHistory = localStorage.getItem(storageKeys.history);
+            if (gameHistory) {
+              const history: GameHistory[] = JSON.parse(gameHistory);
+              const lastGame = history[history.length - 1];
+              const lastGameDate = lastGame?.date;
+
+              // If last game wasn't yesterday, reset streak
+              const yesterday = new Date(new Date().setDate(new Date().getDate() - 1))
+                .toISOString()
+                .split("T")[0];
+              if (lastGameDate !== yesterday) {
+                streakInfo.currentStreak = 0;
+              }
+            }
+          }
+
+          setStreak(streakInfo.currentStreak);
+        }
+
+        // Get function for the selected date
+        const dailyFunction = getFunctionForDate(gameDate);
 
         if (!dailyFunction) {
           console.error("Daily function not found");
           return;
         }
 
-        // Check if there's a saved game state for today
-        const savedGameState = localStorage.getItem(storageKeys.currentGame);
-        if (savedGameState) {
-          const saved = JSON.parse(savedGameState) as GameState & { date: string };
-          if (saved.date === today) {
-            // Load the saved game state
-            setGameState(saved);
-            setLoading(false);
-            return;
+        // Check if there's a saved game state for this date (only for daily games)
+        if (!isArchiveMode) {
+          const savedGameState = localStorage.getItem(storageKeys.currentGame);
+          if (savedGameState) {
+            const saved = JSON.parse(savedGameState) as GameState & { date: string };
+            if (saved.date === gameDate) {
+              // Load the saved game state
+              setGameState(saved);
+              setLoading(false);
+              return;
+            }
           }
         }
 
@@ -137,7 +162,7 @@ export function GameComponent({ language, functions }: GameComponentProps) {
     };
 
     fetchDailyFunction();
-  }, [language, functions]);
+  }, [language, functions, isArchiveMode, archiveDate]);
 
   const handleGuessInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -269,57 +294,72 @@ export function GameComponent({ language, functions }: GameComponentProps) {
       const gameOver = isCorrect || gameState.guesses.length >= 5;
       const newGuesses = [...gameState.guesses, guessResult];
 
-      // Save current game state to localStorage
-      const today = new Date().toISOString().split("T")[0] ?? "";
+      // Get the date for saving (use archive date if in archive mode, otherwise today)
+      const saveDate = (isArchiveMode && archiveDate) ? archiveDate : (new Date().toISOString().split("T")[0] as string);
 
-      setGameState((prev) =>
-        prev
-          ? (() => {
-              const updatedGameState: GameState = {
+      // Only save to persistent storage if NOT in archive mode
+      if (!isArchiveMode) {
+        setGameState((prev) =>
+          prev
+            ? (() => {
+                const updatedGameState: GameState = {
+                  ...prev,
+                  guesses: newGuesses,
+                  gameOver,
+                  won: isCorrect,
+                };
+                localStorage.setItem(
+                  storageKeys.currentGame,
+                  JSON.stringify({ ...updatedGameState, date: saveDate })
+                );
+                return updatedGameState;
+              })()
+            : null
+        );
+
+        // Save to localStorage if game is over
+        if (gameOver) {
+          const gameHistory: GameHistory[] = JSON.parse(
+            localStorage.getItem(storageKeys.history) || "[]"
+          );
+
+          gameHistory.push({
+            date: saveDate,
+            won: isCorrect,
+            guesses: [...gameState.guesses, guessResult],
+            functionName: dailyFunc.name,
+          });
+
+          localStorage.setItem(storageKeys.history, JSON.stringify(gameHistory));
+
+          // Update streak
+          let newStreak = streak;
+          if (isCorrect) {
+            newStreak = streak + 1;
+          } else {
+            newStreak = 0;
+          }
+
+          setStreak(newStreak);
+          localStorage.setItem(
+            storageKeys.streak,
+            JSON.stringify({
+              currentStreak: newStreak,
+              lastGameDate: saveDate,
+            })
+          );
+        }
+      } else {
+        // In archive mode, just update game state without saving to history
+        setGameState((prev) =>
+          prev
+            ? {
                 ...prev,
                 guesses: newGuesses,
                 gameOver,
                 won: isCorrect,
-              };
-              localStorage.setItem(
-                storageKeys.currentGame,
-                JSON.stringify({ ...updatedGameState, date: today })
-              );
-              return updatedGameState;
-            })()
-          : null
-      );
-
-      // Save to localStorage if game is over
-      if (gameOver) {
-        const gameHistory: GameHistory[] = JSON.parse(
-          localStorage.getItem(storageKeys.history) || "[]"
-        );
-
-        gameHistory.push({
-          date: today,
-          won: isCorrect,
-          guesses: [...gameState.guesses, guessResult],
-          functionName: dailyFunc.name,
-        });
-
-        localStorage.setItem(storageKeys.history, JSON.stringify(gameHistory));
-
-        // Update streak
-        let newStreak = streak;
-        if (isCorrect) {
-          newStreak = streak + 1;
-        } else {
-          newStreak = 0;
-        }
-
-        setStreak(newStreak);
-        localStorage.setItem(
-          storageKeys.streak,
-          JSON.stringify({
-            currentStreak: newStreak,
-            lastGameDate: today,
-          })
+              }
+            : null
         );
       }
 
