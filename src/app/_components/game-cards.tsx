@@ -59,7 +59,7 @@ interface FunctionCardProps {
   isAnswer: boolean;
 }
 
-export function FunctionCard({ func, isAnswer }: FunctionCardProps) {
+export function FunctionCard({ func }: FunctionCardProps) {
   return (
     <div className="rounded-xl border-2 border-gray-700 bg-gray-800 p-6 shadow-md">
       <h2 className="mb-4 text-2xl font-bold text-gray-100">{func.name}</h2>
@@ -135,17 +135,17 @@ export function GuessCard({
   },
   comparison,
 }: GuessCardProps) {
-  if (!functionData) {
+    if (!functionData) {
     return (
-      <div className="rounded-lg border-2 border-gray-200 bg-white p-4">
+        <div className="rounded-lg border-2 border-gray-200 bg-white p-4">
         <div className="text-center">
-          <div className="font-semibold text-gray-700">
-            "{guessedFunctionName}" not found
-          </div>
+            <div className="font-semibold text-gray-700">
+            {`"${guessedFunctionName}" not found`}
+            </div>
         </div>
-      </div>
+        </div>
     );
-  }
+}
 
   const getHint = (
     field: "introducedIn" | "overloads" | "parameterCount"

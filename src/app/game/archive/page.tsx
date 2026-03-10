@@ -14,7 +14,7 @@ export default function ArchivePage() {
   yesterday.setDate(yesterday.getDate() - 1);
   
   const [selectedDate, setSelectedDate] = useState<string>(
-    yesterday.toISOString().split("T")[0] || ""
+    yesterday.toISOString().split("T")[0] ?? ""
   );
   const [selectedLanguage, setSelectedLanguage] = useState<"cpp" | "csharp">("cpp");
   const [showGame, setShowGame] = useState(false);
@@ -51,7 +51,7 @@ export default function ArchivePage() {
               </Link>
               <h1 className="text-5xl font-bold text-indigo-400 mb-2">Puzzle Archive</h1>
               <p className="text-gray-400">
-                Play any puzzle from the archive. Archive games don't affect your streak.
+                {`Play any puzzle from the archive. Archive games don't affect your streak.`}
               </p>
             </div>
 
@@ -113,7 +113,7 @@ export default function ArchivePage() {
             {/* Info */}
             <div className="mt-8 rounded-lg bg-gray-800 p-4 text-center shadow">
               <p className="text-sm text-gray-400">
-                💡 Playing archive puzzles won't affect your daily streak or game history.
+                {`💡 Playing archive puzzles won't affect your daily streak or game history.`}
               </p>
             </div>
           </>

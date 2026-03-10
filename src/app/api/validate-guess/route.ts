@@ -5,7 +5,7 @@ import { ratelimit } from "~/utils/ratelimit";
 export async function POST(request: Request) {
   try {
     // Rate limiting
-    const ip = request.headers.get("x-forwarded-for") || "anonymous";
+    const ip = request.headers.get("x-forwarded-for") ?? "anonymous";
     const { success } = await ratelimit.limit(ip);
 
     if (!success) {

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import type { CppFunction, GameState, GuessResult, FieldName, RevealState } from "~/types/game";
-import { FunctionCard, GuessCard } from "~/app/_components/game-cards";
+import { GuessCard } from "~/app/_components/game-cards";
 import { fuzzyMatch, fuzzyScore } from "~/utils/fuzzy";
 
 interface GameHistory {
@@ -320,7 +320,7 @@ export function GameComponent({ language, functions, archiveDate, isArchiveMode 
         // Save to localStorage if game is over
         if (gameOver) {
           const gameHistory: GameHistory[] = JSON.parse(
-            localStorage.getItem(storageKeys.history) || "[]"
+            localStorage.getItem(storageKeys.history) ?? "[]"
           );
 
           gameHistory.push({
@@ -375,7 +375,7 @@ export function GameComponent({ language, functions, archiveDate, isArchiveMode 
       <main className="flex min-h-screen items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800">
         <div className="text-center">
           <div className="mb-4 text-4xl font-bold text-indigo-400">Funcle</div>
-          <div className="text-gray-400">Loading today's puzzle...</div>
+          <div className="text-gray-400">{`Loading today's puzzle...`}</div>
         </div>
       </main>
     );
@@ -495,7 +495,7 @@ export function GameComponent({ language, functions, archiveDate, isArchiveMode 
                     guess.guessedFunction?.name ===
                     gameState.dailyFunction.name
                   }
-                  functionData={guess.guessedFunction || undefined}
+                  functionData={guess.guessedFunction ?? undefined}
                   fieldStates={guess.fields}
                   comparison={guess.comparison}
                 />
