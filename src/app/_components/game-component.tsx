@@ -73,14 +73,17 @@ export function GameComponent({ language, functions, archiveDate, isArchiveMode 
   };
 
   // Helper function to get daily function for any date
-  function getFunctionForDate(date: string): CppFunction {
-    const dateObj = new Date(date);
-    const startDate = new Date("2024-01-01");
-    const daysSinceStart = Math.floor(
-      (dateObj.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
-    );
+  function hashStringToIndex(s: string, mod: number) {
+    let hash = 5381;
+    for (let i = 0; i < s.length; i++) {
+      hash = (hash * 33) ^ s.charCodeAt(i);
+    }
+    return (hash >>> 0) % mod;
+  }
 
-    const index = daysSinceStart % functions.length;
+  function getFunctionForDate(date: string): CppFunction {
+    const dateKey = new Date(date).toISOString().split("T")[0] ?? "";
+    const index = hashStringToIndex(dateKey, functions.length);
     return functions[index] as CppFunction;
   }
 

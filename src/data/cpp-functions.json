@@ -3,72 +3,120 @@
     "name": "vector",
     "header": "<vector>",
     "introducedIn": "C++98",
-    "namingStyle": "snake_case",
-    "overloads": 12,
-    "parameterCount": 2
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
   },
   {
-    "name": "sort",
-    "header": "<algorithm>",
+    "name": "push_back",
+    "header": "<vector>",
     "introducedIn": "C++98",
     "namingStyle": "snake_case",
-    "overloads": 2,
-    "parameterCount": 2
-  },
-  {
-    "name": "optional",
-    "header": "<optional>",
-    "introducedIn": "C++17",
-    "namingStyle": "snake_case",
-    "overloads": 8,
+    "overloads": 1,
     "parameterCount": 1
   },
   {
-    "name": "unique_ptr",
-    "header": "<memory>",
+    "name": "size",
+    "header": "<vector>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "reserve",
+    "header": "<vector>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "shrink_to_fit",
+    "header": "<vector>",
     "introducedIn": "C++11",
     "namingStyle": "snake_case",
-    "overloads": 6,
-    "parameterCount": 2
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "at",
+    "header": "<vector>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "front",
+    "header": "<vector>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "back",
+    "header": "<vector>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "clear",
+    "header": "<vector>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "iterator",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
   },
   {
     "name": "string",
     "header": "<string>",
     "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "c_str",
+    "header": "<string>",
+    "introducedIn": "C++98",
     "namingStyle": "snake_case",
-    "overloads": 15,
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "stol",
+    "header": "<string>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
     "parameterCount": 1
   },
   {
-    "name": "map",
-    "header": "<map>",
-    "introducedIn": "C++98",
-    "namingStyle": "snake_case",
-    "overloads": 10,
-    "parameterCount": 2
-  },
-  {
-    "name": "array",
-    "header": "<array>",
+    "name": "stof",
+    "header": "<string>",
     "introducedIn": "C++11",
-    "namingStyle": "snake_case",
+    "namingStyle": "lowercase",
     "overloads": 1,
-    "parameterCount": 2
+    "parameterCount": 1
   },
   {
-    "name": "unordered_map",
-    "header": "<unordered_map>",
+    "name": "to_string",
+    "header": "<string>",
     "introducedIn": "C++11",
     "namingStyle": "snake_case",
-    "overloads": 10,
-    "parameterCount": 2
-  },
-  {
-    "name": "function",
-    "header": "<functional>",
-    "introducedIn": "C++11",
-    "namingStyle": "snake_case",
-    "overloads": 5,
+    "overloads": 6,
     "parameterCount": 1
   },
   {
@@ -76,47 +124,2175 @@
     "header": "<memory>",
     "introducedIn": "C++11",
     "namingStyle": "snake_case",
-    "overloads": 8,
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "unique_ptr",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "weak_ptr",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "dynamic_pointer_cast",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "static_pointer_cast",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "move",
+    "header": "<utility>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "forward",
+    "header": "<utility>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "swap",
+    "header": "<utility>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
     "parameterCount": 2
+  },
+  {
+    "name": "pair",
+    "header": "<utility>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "make_pair",
+    "header": "<utility>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "tuple",
+    "header": "<tuple>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "get",
+    "header": "<tuple>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 4,
+    "parameterCount": 1
+  },
+  {
+    "name": "apply",
+    "header": "<tuple>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "find",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 2
+  },
+  {
+    "name": "find_if",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "for_each",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "iota",
+    "header": "<numeric>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "count",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "count_if",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "merge",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 3
+  },
+  {
+    "name": "distance",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "ostream",
+    "header": "<ostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "cout",
+    "header": "<iostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "cin",
+    "header": "<iostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "cerr",
+    "header": "<iostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "clog",
+    "header": "<iostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "flush",
+    "header": "<ostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "tie",
+    "header": "<iostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "memcpy",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 3
+  },
+  {
+    "name": "memcmp",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 3
+  },
+  {
+    "name": "memmove",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 3
+  },
+  {
+    "name": "memset",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 3
+  },
+  {
+    "name": "strlen",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "strcmp",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 2
+  },
+  {
+    "name": "strncmp",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 3
+  },
+  {
+    "name": "strcpy",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 2
+  },
+  {
+    "name": "strncpy",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 3
+  },
+  {
+    "name": "strcat",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 2
+  },
+  {
+    "name": "strncat",
+    "header": "<cstring>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 3
+  },
+  {
+    "name": "toupper",
+    "header": "<cctype>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "tolower",
+    "header": "<cctype>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "isalpha",
+    "header": "<cctype>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "isdigit",
+    "header": "<cctype>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "isalnum",
+    "header": "<cctype>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "sqrt",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 4,
+    "parameterCount": 1
+  },
+  {
+    "name": "pow",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 4,
+    "parameterCount": 2
+  },
+  {
+    "name": "abs",
+    "header": "<cstdlib>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 4,
+    "parameterCount": 1
+  },
+  {
+    "name": "fabs",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "round",
+    "header": "<cmath>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "floor",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "ceil",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "exp",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "log",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "log10",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "sin",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "cos",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "tan",
+    "header": "<cmath>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "freopen",
+    "header": "<cstdio>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 3
+  },
+  {
+    "name": "fopen",
+    "header": "<cstdio>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 2
+  },
+  {
+    "name": "fclose",
+    "header": "<cstdio>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "fread",
+    "header": "<cstdio>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 4
+  },
+  {
+    "name": "fwrite",
+    "header": "<cstdio>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 4
+  },
+  {
+    "name": "fflush",
+    "header": "<cstdio>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "fseek",
+    "header": "<cstdio>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 3
+  },
+  {
+    "name": "ftell",
+    "header": "<cstdio>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "rewind",
+    "header": "<cstdio>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "ifstream",
+    "header": "<fstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "ofstream",
+    "header": "<fstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "fstream",
+    "header": "<fstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "close",
+    "header": "<fstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "read",
+    "header": "<fstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "write",
+    "header": "<fstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "stringstream",
+    "header": "<sstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "istringstream",
+    "header": "<sstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "strstream",
+    "header": "<sstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "ostringstream",
+    "header": "<sstream>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "ios_base",
+    "header": "<ios>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "ios",
+    "header": "<ios>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "endl",
+    "header": "<ostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "flush",
+    "header": "<ostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "setw",
+    "header": "<iomanip>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "setprecision",
+    "header": "<iomanip>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "setfill",
+    "header": "<iomanip>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "hex",
+    "header": "<iomanip>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "dec",
+    "header": "<iomanip>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "oct",
+    "header": "<iomanip>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "boolalpha",
+    "header": "<ios>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "noboolalpha",
+    "header": "<ios>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "cerr",
+    "header": "<iostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "istream",
+    "header": "<istream>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "ostream",
+    "header": "<ostream>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "istreambuf_iterator",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "ostreambuf_iterator",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "back_inserter",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "front_inserter",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "inserter",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "reverse_iterator",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "move_iterator",
+    "header": "<iterator>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "istream_iterator",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "ostream_iterator",
+    "header": "<iterator>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "copy",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "copy_if",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "copy_n",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "move",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "swap_ranges",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "reverse",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "rotate",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "iota",
+    "header": "<numeric>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "gcd",
+    "header": "<numeric>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "lcm",
+    "header": "<numeric>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "merge",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 3
+  },
+  {
+    "name": "inplace_merge",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "nth_element",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "is_permutation",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "random_shuffle",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "shuffle",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "default_random_engine",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "mt19937",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "uniform_int_distribution",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "uniform_real_distribution",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "random_device",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "seed_seq",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "bernoulli_distribution",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "normal_distribution",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "exponential_distribution",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "piecewise_linear_distribution",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "discrete_distribution",
+    "header": "<random>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "numeric_limits",
+    "header": "<limits>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "max",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "min",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "clamp",
+    "header": "<algorithm>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "swap_ranges",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "isnan",
+    "header": "<cmath>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "isfinite",
+    "header": "<cmath>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "isinf",
+    "header": "<cmath>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "fpclassify",
+    "header": "<cmath>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 3,
+    "parameterCount": 1
+  },
+  {
+    "name": "numeric_limits",
+    "header": "<limits>",
+    "introducedIn": "C++98",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "complex",
+    "header": "<complex>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "polar",
+    "header": "<complex>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "abs",
+    "header": "<complex>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 1
+  },
+  {
+    "name": "arg",
+    "header": "<complex>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "norm",
+    "header": "<complex>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "conj",
+    "header": "<complex>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "imag",
+    "header": "<complex>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "real",
+    "header": "<complex>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "valarray",
+    "header": "<valarray>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "slice",
+    "header": "<valarray>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "gslice",
+    "header": "<valarray>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "cmath_constants",
+    "header": "<cmath>",
+    "introducedIn": "C++20",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "numbers_pi",
+    "header": "<numbers>",
+    "introducedIn": "C++20",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "numbers_e",
+    "header": "<numbers>",
+    "introducedIn": "C++20",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "chrono",
+    "header": "<chrono>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "steady_clock",
+    "header": "<chrono>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "system_clock",
+    "header": "<chrono>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "high_resolution_clock",
+    "header": "<chrono>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "duration_cast",
+    "header": "<chrono>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "time_point",
+    "header": "<chrono>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "milliseconds",
+    "header": "<chrono>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "microseconds",
+    "header": "<chrono>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "nanoseconds",
+    "header": "<chrono>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "thread",
+    "header": "<thread>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "this_thread",
+    "header": "<thread>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "sleep_for",
+    "header": "<thread>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "sleep_until",
+    "header": "<thread>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "future",
+    "header": "<future>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "promise",
+    "header": "<future>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "packaged_task",
+    "header": "<future>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "get",
+    "header": "<future>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "wait",
+    "header": "<future>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "wait_for",
+    "header": "<future>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "wait_until",
+    "header": "<future>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "mutex",
+    "header": "<mutex>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "recursive_mutex",
+    "header": "<mutex>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "shared_mutex",
+    "header": "<shared_mutex>",
+    "introducedIn": "C++14",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "lock_guard",
+    "header": "<mutex>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "condition_variable",
+    "header": "<condition_variable>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "notify_one",
+    "header": "<condition_variable>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "notify_all",
+    "header": "<condition_variable>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "wait",
+    "header": "<condition_variable>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "wait_for",
+    "header": "<condition_variable>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "wait_until",
+    "header": "<condition_variable>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "shared_ptr",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "weak_ptr",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "owner_less",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "allocator",
+    "header": "<memory>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "get_deleter",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "default_delete",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "optional",
+    "header": "<optional>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "has_value",
+    "header": "<optional>",
+    "introducedIn": "C++17",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "value_or",
+    "header": "<optional>",
+    "introducedIn": "C++17",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "nullopt",
+    "header": "<optional>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
   },
   {
     "name": "variant",
     "header": "<variant>",
     "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "monostate",
+    "header": "<variant>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "get_if",
+    "header": "<variant>",
+    "introducedIn": "C++17",
     "namingStyle": "snake_case",
-    "overloads": 7,
+    "overloads": 1,
     "parameterCount": 2
   },
   {
-    "name": "filesystem::path",
-    "header": "<filesystem>",
+    "name": "holds_alternative",
+    "header": "<variant>",
     "introducedIn": "C++17",
     "namingStyle": "snake_case",
-    "overloads": 20,
+    "overloads": 1,
     "parameterCount": 1
   },
   {
     "name": "any",
     "header": "<any>",
     "introducedIn": "C++17",
-    "namingStyle": "snake_case",
-    "overloads": 5,
+    "namingStyle": "lowercase",
+    "overloads": 0,
     "parameterCount": 0
   },
   {
-    "name": "span",
-    "header": "<span>",
+    "name": "bad_any_cast",
+    "header": "<any>",
+    "introducedIn": "C++17",
+    "namingStyle": "snake_case",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "type_index",
+    "header": "<typeindex>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "type_info",
+    "header": "<typeinfo>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "typeid",
+    "header": "<typeinfo>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 1
+  },
+  {
+    "name": "bad_cast",
+    "header": "<typeinfo>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "bad_typeid",
+    "header": "<typeinfo>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "exception",
+    "header": "<exception>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "terminate",
+    "header": "<exception>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "set_terminate",
+    "header": "<exception>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "current_exception",
+    "header": "<exception>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "rethrow_exception",
+    "header": "<exception>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "throw_with_nested",
+    "header": "<exception>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "make_exception_ptr",
+    "header": "<exception>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "regex",
+    "header": "<regex>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "smatch",
+    "header": "<regex>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "regex_replace",
+    "header": "<regex>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 3,
+    "parameterCount": 3
+  },
+  {
+    "name": "basic_regex",
+    "header": "<regex>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "cmatch",
+    "header": "<regex>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "regex_iterator",
+    "header": "<regex>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "regex_token_iterator",
+    "header": "<regex>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "hash",
+    "header": "<functional>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "function",
+    "header": "<functional>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "placeholders",
+    "header": "<functional>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "mem_fn",
+    "header": "<functional>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "ref",
+    "header": "<functional>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "cref",
+    "header": "<functional>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "not_fn",
+    "header": "<functional>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "reference_wrapper",
+    "header": "<functional>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "less",
+    "header": "<functional>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "greater",
+    "header": "<functional>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "default_delete",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "allocator_traits",
+    "header": "<memory>",
+    "introducedIn": "C++11",
+    "namingStyle": "PascalCase",
+    "overloads": 0,
+    "parameterCount": 0
+  },
+  {
+    "name": "erase_if",
+    "header": "<container>",
     "introducedIn": "C++20",
     "namingStyle": "snake_case",
-    "overloads": 8,
+    "overloads": 1,
     "parameterCount": 2
   },
   {
-    "name": "ranges::sort",
+    "name": "erase_copy",
     "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "remove",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "remove_if",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "remove_copy",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "remove_copy_if",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "replace",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 3
+  },
+  {
+    "name": "replace_if",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 2,
+    "parameterCount": 3
+  },
+  {
+    "name": "replace_copy",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 4
+  },
+  {
+    "name": "replace_copy_if",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 4
+  },
+  {
+    "name": "transform_exclusive_scan",
+    "header": "<numeric>",
+    "introducedIn": "C++17",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "sample",
+    "header": "<algorithm>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 4
+  },
+  {
+    "name": "is_partitioned",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "partition_point",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "partition",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "stable_partition",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 2,
+    "parameterCount": 2
+  },
+  {
+    "name": "partition_copy",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 4
+  },
+  {
+    "name": "inplace_merge",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "rotate_copy",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "rotate",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "reverse_copy",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "unique_copy",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "adjacent_find",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "all_of",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "any_of",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "none_of",
+    "header": "<algorithm>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "make_heap",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "push_heap",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "pop_heap",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 2
+  },
+  {
+    "name": "sort_heap",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "partial_sort",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 3
+  },
+  {
+    "name": "partial_sort_copy",
+    "header": "<algorithm>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 4
+  },
+  {
+    "name": "make_move_iterator",
+    "header": "<iterator>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "make_reverse_iterator",
+    "header": "<iterator>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "empty",
+    "header": "<utility>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "ssize",
+    "header": "<utility>",
+    "introducedIn": "C++20",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "data",
+    "header": "<utility>",
+    "introducedIn": "C++17",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "to_address",
+    "header": "<memory>",
     "introducedIn": "C++20",
     "namingStyle": "snake_case",
-    "overloads": 4,
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "destroy_at",
+    "header": "<memory>",
+    "introducedIn": "C++17",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 1
+  },
+  {
+    "name": "get_allocator",
+    "header": "<container>",
+    "introducedIn": "C++11",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "max_size",
+    "header": "<container>",
+    "introducedIn": "C++98",
+    "namingStyle": "snake_case",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "empty",
+    "header": "<container>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "capacity",
+    "header": "<container>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
+    "parameterCount": 0
+  },
+  {
+    "name": "reserve",
+    "header": "<container>",
+    "introducedIn": "C++11",
+    "namingStyle": "lowercase",
+    "overloads": 1,
     "parameterCount": 1
   }
 ]

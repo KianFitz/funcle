@@ -3,14 +3,21 @@ import functions from "~/data/cpp-functions.json";
 import { ratelimit } from "~/utils/ratelimit";
 
 // Deterministic daily function selection based on date
+function hashStringToIndex(s: string, mod: number) {
+  // djb2 hash, deterministic and simple
+  let hash = 5381;
+  for (let i = 0; i < s.length; i++) {
+    hash = (hash * 33) ^ s.charCodeAt(i);
+  }
+  // Convert to unsigned 32-bit and mod
+  return (hash >>> 0) % mod;
+}
+
 function getDailyFunction(): CppFunction {
   const today = new Date();
-  const startDate = new Date("2024-01-01");
-  const daysSinceStart = Math.floor(
-    (today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
-  );
+  const dateKey = today.toISOString().split("T")[0] ?? ""; // YYYY-MM-DD
 
-  const index = daysSinceStart % functions.length;
+  const index = hashStringToIndex(dateKey, functions.length);
   return functions[index] as CppFunction;
 }
 
